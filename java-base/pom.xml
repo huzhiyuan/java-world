@@ -14,7 +14,15 @@
     <url>http://maven.apache.org</url>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- Set default encoding to UTF-8 to remove maven complaints -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Java compiler configuration -->
+        <sourceJavaVersion>1.8</sourceJavaVersion>
+        <targetJavaVersion>1.8</targetJavaVersion>
+
     </properties>
 
     <dependencies>
@@ -24,5 +32,12 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- guava start-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>11.0.2</version>
+        </dependency>
+        <!-- guava end-->
     </dependencies>
 </project>

@@ -19,6 +19,7 @@
       <module>logger-demo</module>
       <module>spark-demo</module>
       <module>hdfs-demo</module>
+      <module>my-flume</module>
   </modules>
 
   <dependencies>

@@ -24,7 +24,7 @@ public class SparkOnHdfs {
                 .appName("Spark On ES By JavaAPI")
                 .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
                 .config("spark.rdd.compress", "true")
-                .master("local[2]")
+                //.master("yarn-cluster")
                 .getOrCreate();
 
         JavaSparkContext jsc = JavaSparkContext.fromSparkContext(sparkSession.sparkContext());
@@ -33,7 +33,7 @@ public class SparkOnHdfs {
 
         List<String> x = javaRDD.filter(r->r.contains("sa")).collect();
         System.out.println(x.size());
-        jsc.stop();
+        //jsc.stop();
     }
 
 }

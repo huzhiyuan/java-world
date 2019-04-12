@@ -17,7 +17,7 @@ public final class SparkOnPI {
 
     public static void main(String[] args) throws Exception {
         SparkConf sparkConf = new SparkConf().setAppName("JavaSparkPi");
-        //sparkConf.setMaster("local");
+        sparkConf.setMaster("local");
         JavaSparkContext jsc = new JavaSparkContext(sparkConf);
 
         int slices = (args.length == 1) ? Integer.parseInt(args[0]) : 2;
